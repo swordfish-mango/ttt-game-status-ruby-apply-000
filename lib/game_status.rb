@@ -48,8 +48,8 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board)
-    board[won?(board)[0]]
+  if !won?(board)
+    nil
   end
-  nil
+  board[won?(board)[0]]
 end
