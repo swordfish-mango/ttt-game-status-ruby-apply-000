@@ -27,9 +27,14 @@ def won?(board)
     
     if position_1 == "X" and position_2 == "X" and position_3 == "X"
       return combo
-    elsif position_1 == "O" and position_2 == "O" and position_3 == "O"
+    end
+    if position_1 == "O" and position_2 == "O" and position_3 == "O"
       return combo
     end
   end
   false
+end
+
+def full?(board)
+  board.include(" ")
 end
