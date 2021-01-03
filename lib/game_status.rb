@@ -25,7 +25,9 @@ def won?(board)
     position_2 = board[win_index_2]
     position_3 = board[win_index_3]
     
-    if position_1 == position_2 and position_2 == position_3
+    if position_1 == "X" and position_2 == "X" and position_3 == "X"
+      combo
+    elsif position_1 == "O" and position_2 == "O" and position_3 == "O"
       combo
     end
   end
