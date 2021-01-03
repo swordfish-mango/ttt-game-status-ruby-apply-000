@@ -14,3 +14,20 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combo|
+    win_index_1 = combo[0]
+    win_index_2 = combo[1]
+    win_index_3 = combo[2]
+    
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+    
+    if position_1 == position_2 and position_2 == position_3
+      combo
+    end
+  end
+  false
+end
